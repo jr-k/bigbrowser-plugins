@@ -1,0 +1,25 @@
+{
+	"id": "github",
+	"name": "GitHub",
+	"description": "Small quality-of-life tweaks for GitHub.",
+	"version": "1.0.0",
+	"author": "JRK",
+	"homepage": "https://github.com/jr-k/bigbrowser-plugins/tree/main/plugins/github",
+	"iconUrl": "https://github.githubassets.com/favicons/favicon.svg",
+	"matches": ["https://github.com/*"],
+	"tweaks": [
+		{
+			"id": "project_repository",
+			"name": "Project board: show repository column",
+			"description": "Opens organisation project boards with the Title, Repository, Labels, Reviewers and Assignees columns visible.",
+			"default": true,
+			"routes": [
+				{
+					"protocol": "https",
+					"host": "github.com",
+					"pattern": "https://github.com/orgs{/orgName}/projects{/projectId}{/path*}"
+				}
+			]
+		}
+	]
+}
